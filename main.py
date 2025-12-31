@@ -89,7 +89,7 @@ async def text_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         users = db.get_all_users()
         msg = "👥 Users List\n\n"
         for uid, name in users:
-            msg += f"{name}\nID: {uid}\n\n"
+            msg += f"{name}\nID: `{uid}`\n\n"
 
         await update.message.reply_text(msg, reply_markup=kb)
 
