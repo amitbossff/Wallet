@@ -1,2 +1,4 @@
-BOT_TOKEN = "8049051535:AAFoWhfJKI2qflRl3OmVsIYLHU4-fbQqjaE"
-ADMIN_IDS = [7412418424]  # apna Telegram user id
+import os
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")  # Render ENV
+ADMIN_IDS = list(map(int, os.getenv("ADMIN_IDS", "").split(",")))
